@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://caolist.github.io</id>
+    <title>caolist&apos;s personal Blog</title>
+    <updated>2020-03-03T07:40:23.749Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://caolist.github.io"/>
+    <link rel="self" href="https://caolist.github.io/atom.xml"/>
+    <subtitle>千里之行，始于足下。</subtitle>
+    <logo>https://caolist.github.io/images/avatar.png</logo>
+    <icon>https://caolist.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2020, caolist&apos;s personal Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[关于停电想到的时代的变化]]></title>
+        <id>https://caolist.github.io/post/dKV-lBx15/</id>
+        <link href="https://caolist.github.io/post/dKV-lBx15/">
+        </link>
+        <updated>2020-03-03T03:58:52.000Z</updated>
+        <content type="html"><![CDATA[<p>今天在一个独立博客上看到了一篇博文，是说他们家突然停电，如何判断是自己家的问题还是整个楼都停电了。我结合自己的体会总结了一下。</p>
+<p>放在过去，我们可能会这样：先看看自己家的配电箱有没有跳闸，再去看看楼道的电表有没有跳闸，如果有就是自己家的问题，如果没有，我会先看看楼道的灯亮不亮，敲敲邻居家的门问问情况，这样基本就能判断是否是整个楼都停电了。</p>
+<p>但是现在这一切根本不用这么麻烦，你只需要打开一个可以连接 WiFi 的设备，看一看有没有可以连接的网络就可以了。如果附近的 WiFi 信号都没有了，那几本可以断定不是只有你家停电了，连门都不用出！</p>
+<p>科技改变生活。</p>
+<p>这样好吗？我也不知道。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[还在用 notepad++ ？我劝你赶紧卸载吧]]></title>
+        <id>https://caolist.github.io/post/WYs4MupE-/</id>
+        <link href="https://caolist.github.io/post/WYs4MupE-/">
+        </link>
+        <updated>2019-11-21T09:50:42.000Z</updated>
+        <content type="html"><![CDATA[<p>今天朋友圈发了一条内容是关于 notepad++ 这个软件的消息，我把它卸载了，因为作者是个台独，说了针对我的祖国歪曲事实的言论。</p>
+<p>有朋友会问，一个软件而已，用就好了，为什么要上升到政治层面，关于这点我想展开说一下。</p>
+<p>长久以来，作为一个程序猿，Windows 开发环境，notepad++ 已经成为了必装软件，首先它开源，是免费的，二是作者长期更新，三是安装包很小不占空间但功能强大，可以完成很多文字处理工作以及代码的轻编写，用了很多年，已经习惯了，其实也有一定依赖性了，甚至会推荐给同事。其实前两年就听说过软件开发者是个台湾人，似乎还会公开发表不同的政见，也就是台独云云，没太在意，你个台湾朗，爱说啥是你的自由，我管不着，我们的政府现在也管不着，我就用用软件而已，它确实好用。</p>
+<p>可是这一次不一样了，他的开发者公开的在软件官网发表了一篇文字是指责我的祖国，而且正如我所说，是不怀好意、毫无根据、抹黑性质的不当言论，感觉就好比一个提供给你某项免费服务的人，在背后偷偷骂你说你坏话捅刀子一样，能忍吗？还继续用吗？老子不用了！关于说了什么，大家自己去看看就知道了，使用英文写的，会起到什么影响不言而喻。</p>
+<p>我一直认为程序的世界是单纯的，你代码写得好软件好用我佩服，但请不要把个人政治言论带进程序世界公开发表。不是什么牛逼的事情。而且，就算你软件再牛逼，也有别的软件能代替！</p>
+<p>我喜欢这个行业，同时我也爱我的祖国！</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[中国电信手机用户看过来 天翼防骚扰已上线]]></title>
+        <id>https://caolist.github.io/post/A2TlMmRKZ/</id>
+        <link href="https://caolist.github.io/post/A2TlMmRKZ/">
+        </link>
+        <updated>2019-09-03T05:25:46.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="写在前面">写在前面</h2>
+<p>看标题就知道，这次介绍的是一款防骚扰电话的“应用”，加引号的原因是这个应用不需要安装，在微信公众号上申请开通就行了。</p>
+<p><strong>天翼防骚扰</strong>是中国电信官方发布的骚扰电话拦截服务，可以拦截各种类型的骚扰电话，并且具备自定义拦截即黑名单和白名单功能。</p>
+<p>开通的必要条件如下：</p>
+<ol>
+<li>中国电信4G用户；</li>
+<li>开通高清语音通话服务，即 VoLTE。</li>
+</ol>
+<p>如果你是中国电信4G用户，但不知道怎么开通 VoLTE 服务，可以参考笔者之前的博文：<a href="https://mp.weixin.qq.com/s/aXfEBppiUsElL7XQvItKWQ">给你的 iPhone 开通中国电信 Volte 服务</a></p>
+<p>对于其他电信运营商类似的服务笔者目前不是很清楚，欢迎留言交流。</p>
+<h2 id="怎么做">怎么做？</h2>
+<p>话不多说，现在告诉你如何开通<strong>天翼防骚扰</strong>。</p>
+<h3 id="关注官方微信公众号">关注官方微信公众号</h3>
+<p>打开微信，搜索<strong>天翼防骚扰</strong>，搜索结果第一个就是它的官方公众号，点击并关注。</p>
+<p><img src="https://caolist.github.io/post-images/1567496567273.jpg" alt="" width="300" loading="lazy"><br>
+<img src="https://caolist.github.io/post-images/1567496578544.jpg" alt="" width="300" loading="lazy"></p>
+<p>首先会收到一条推送消息。</p>
+<figure data-type="image" tabindex="1"><img src="https://caolist.github.io/post-images/1567496596964.jpg" alt="" width="300" loading="lazy"></figure>
+<p>点击里面的链接文字：点此登录，开通天翼防骚扰！即可进入登录页面。</p>
+<figure data-type="image" tabindex="2"><img src="https://caolist.github.io/post-images/1567496605245.jpg" alt="" width="300" loading="lazy"></figure>
+<p>需要输入手机号、图形验证码以及短信验证码，然后点击立即登录，首次登录会有协议确认页面，勾选同意并点击立即开通。</p>
+<p><img src="https://caolist.github.io/post-images/1567496615161.jpg" alt="" width="300" loading="lazy"><br>
+<img src="https://caolist.github.io/post-images/1567496639286.jpg" alt="" width="300" loading="lazy"></p>
+<p>接下来跳转至业务受理页面，这时需要等待一会儿，如果业务受理成功，大概十几分钟后会收到一条显示开通成功的短信。</p>
+<figure data-type="image" tabindex="3"><img src="https://caolist.github.io/post-images/1567496645452.jpg" alt="" width="300" loading="lazy"></figure>
+<p>这时在进入微信公众号，点击底部菜单<strong>天翼防骚扰</strong>，显示服务已经成功开通，点击立即体验，即可进入服务主页。</p>
+<p><img src="https://caolist.github.io/post-images/1567496662093.jpg" alt="" width="300" loading="lazy"><br>
+<img src="https://caolist.github.io/post-images/1567496668823.jpg" alt="" width="300" loading="lazy"></p>
+<p>这里可以看到的信息有手机号、拦截记录以及各个设置按钮。点击<strong>骚扰拦截设置</strong>，即可进入骚扰拦截设置页面，对具体的骚扰拦截项目进行设置，每个人对于骚扰电话拦截的频度和内容各不相同，笔者这里就不展开了，请根据自己的需求进行设置。</p>
+<figure data-type="image" tabindex="4"><img src="https://caolist.github.io/post-images/1567496682554.jpg" alt="" width="300" loading="lazy"></figure>
+<p>如果需要帮助，点击服务主页面上的<strong>使用帮助</strong>，可以看到官方提供的详细帮助信息。</p>
+<h2 id="写在后面">写在后面</h2>
+<p>笔者之前也安装了其他骚扰电话的拦截应用，原理是利用 iOS 官方提供的电话拦截功能接口对电话进行拦截，效果一直很稳定。笔者判断这次中国电信提供的<strong>天翼防骚扰</strong>服务应该是从更前一层，也就是在相对的“服务层”对骚扰电话进行拦截。但最近才开始使用，效果好不好还不清楚，如果拦截效果好，也许可以替代其他的骚扰电话拦截软件。</p>
+<p>p.s. <strong>天翼防骚扰</strong>服务完全免费，请各位放心使用。另外我们可以在服务主页面看到两个灰化的按钮，说明未来还会有拦截通知和来电验证的功能，这两个功能还是非常有必要的。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[迅雷的完美替代者 Bitcomt（比特彗星）]]></title>
+        <id>https://caolist.github.io/post/e7UxhpbCE/</id>
+        <link href="https://caolist.github.io/post/e7UxhpbCE/">
+        </link>
+        <updated>2019-08-30T03:29:22.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="写在前面">写在前面</h2>
+<p>最近像以往一样使用【迅雷极速版】下载一些影视剧资源，发现频频出现磁力链接或者 BT 种子正常但提示下载任务出错，不得其解，来回试了很多遍，依然如此，猜测是迅雷公司在服务端对一些资源做了限制，比如国产的影视剧资源，应该是牵扯到版权问题，所以做了限制，其他的情况没有涉及，不做判断。不知道迅雷会员是否也是如此，咱毕竟不是 RMB 玩家，没有体验过，比较尴尬。</p>
+<p>好了，这几年最好用的【迅雷极速版】基本上宣告扯淡，至少是在下载影视剧资源方面，当然，普通的 HTTP 下载可以正常进行，作为普通的下载工具，依然值得使用，速度还是很快。但是，影视剧爱好者该怎么办呢？市面上的 BT 或者磁力下载工具一一试过了，速度基本上维持在 KB 级别，想看什么蓝光、4K 的朋友，醒醒吧，还不如去电影院支持正版去！不过，这里还是有例外的，那就是老牌 P2P 下载工具 Bitcomet（比特彗星），没想到一直在更新，重要的是用它下载比较优质的 BT、磁力资源，基本上可以达到网络的最高限制！</p>
+<p>这里有必要对 P2P 下载技术做一个普及，不废话直接看视频，推荐科技视频博主 <a href="https://space.bilibili.com/258150656?from=search&amp;seid=284995416749545885">回形针PaperClip</a> 做的这期节目，节目讲的非常直观容易理解，推荐！<br>
+<a href="https://www.bilibili.com/video/av57748098/">别再问我什么是 BT 种子</a></p>
+<p>那么 Bitcomet（比特彗星）又是什么呢？看看维基百科上的解释：</p>
+<blockquote>
+<p>比特彗星（BitComet，缩写：BC）是一个用C++语言为 Microsoft Windows 平台编写的 BitTorrent 客户端软件，也可用于HTTP/FTP下载，并可选装“ eMule 插件”通过电驴网络进行 BitTorrent/电驴同时下载。</p>
+</blockquote>
+<h2 id="怎么做">怎么做？</h2>
+<h3 id="安装-bitcomet">安装 Bitcomet</h3>
+<p>首先需要 Bitcomet 的安装文件，请扫描下面二维码关注我的订阅号，后台回复【BT】两个字母，你将会得到最新版 Bitcomet 的安装文件。👇</p>
+<figure data-type="image" tabindex="1"><img src="https://caolist.github.io/post-images/1567151851367.jpg" alt="" width="200" loading="lazy"></figure>
+<p>Windows 操作系统软件安装方式比较简单，双击下载的 exe 可执行文件，一步步向下安装就可以了，这里不赘述。</p>
+<h3 id="配置软件">配置软件</h3>
+<p>安装好了以后双击桌面 Bitcomet 图标运行软件，如下图：</p>
+<figure data-type="image" tabindex="2"><img src="https://caolist.github.io/post-images/1567151857852.png" alt="" width="800" loading="lazy"></figure>
+<p>点击菜单栏 -&gt; 工具 -&gt; 选项，打开配置界面，就可以进行各种参数的设置了，这里可以根据实际情况如：默认下载路径、限速等做具体设置，需要特别说明的一点是：任务设置 -&gt; BT下载 -&gt; Tracker，如下图所示：</p>
+<figure data-type="image" tabindex="3"><img src="https://caolist.github.io/post-images/1567151864457.png" alt="" width="800" loading="lazy"></figure>
+<p>需要对上下两个选择框进行勾选，确保下载时使用优质的 Tracker，对提升下载速度有很大的帮助。</p>
+<h3 id="寻找资源">寻找资源</h3>
+<p>重中之重是寻找资源，也就是磁力链接或者 BT 种子，到哪里去搜索呢，其实不会太难，直接在各大搜索引擎中搜索需要下载的资源 + 磁力链接 或者 BT 种子 关键词就可以搜索出来一大堆了，只是这种泛搜索出来的资源质量不一定高，有可能下载速度会很慢。这里笔者推荐一个专业搜索 P2P 资源的网站：<a href="http://savebtcn.ws/">http://savebtcn.ws</a></p>
+<p>打开网页，如同搜索引擎一般，直接在搜索框输入想要下载的资源名点击搜索按钮就可以了，如下图所示：</p>
+<figure data-type="image" tabindex="4"><img src="https://caolist.github.io/post-images/1567151871399.png" alt="" width="800" loading="lazy"></figure>
+<h3 id="进行下载">进行下载</h3>
+<p>接着上面的 <a href="http://savebtcn.ws/">http://savebtcn.ws</a> 网站来说，在搜索结果列表上点击需要下载资源的【磁力链】即可激活 Bitcomet 自动创建下载任务，或者点击【下载BT种子】，然后下载该资源的 BT 种子，点击 Bitcomet 的 Torrent 图形按钮，选择下载好的 BT 种子，也一样可以创建下载任务。</p>
+<figure data-type="image" tabindex="5"><img src="https://caolist.github.io/post-images/1567151875371.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://caolist.github.io/post-images/1567151880668.png" alt="" width="800" loading="lazy"></figure>
+<h2 id="写在后面">写在后面</h2>
+<p>你会发现上面所添加的下载任务很快就下载完成了，Bitcomet 默认会开启上传，希望你保持 P2P 的核心精神，不要关闭上传分享，在你下载享受的同时，也希望分享给别人这份喜悦，当然分享多长时间或者关闭分享，是你的自由。</p>
+<p>目前来看，这是除去迅雷以外比较好的下载方法了，如果你有更好的建议，欢迎分享讨论。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[屏蔽网页点击邮件链接弹出邮件客户端]]></title>
+        <id>https://caolist.github.io/post/WtQf3OmlX/</id>
+        <link href="https://caolist.github.io/post/WtQf3OmlX/">
+        </link>
+        <updated>2019-03-08T03:28:17.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="前言">前言</h1>
+<p><strong>mailto:</strong> 是很多网页上都会使用的电子邮件联系链接，只需要点一下就能打开邮件客户端。然而，对于大多数人来说，这个操作很不友好，希望关闭这个功能。要关闭它，其实不那么难。</p>
+<h1 id="步骤">步骤</h1>
+<h2 id="给浏览器安装油猴浏览器扩展应用">给浏览器安装“油猴”浏览器扩展应用</h2>
+<p>“油猴”（Tampermonkey）其实是一个脚本管理器，它的魅力其实是脚本文件的魅力。现代的网页特效缤纷，外观出彩，其中 CSS 样式表和 JavaScript 脚本起到了不可或缺的作用，比如说我的博客上的各种文字、图片的显示效果就是通过 CSS 和 JavaScript 脚本来实现的。Tampermonkey 通过加载第三方的脚本文件，改变页面中的 CSS 和 JavaScript 元素，可以让整个网页大变样，也可以在网页中增加额外的功能。安装步骤如下：（以 Chrome 浏览器为例）</p>
+<h3 id="点击-chrome-浏览器菜单更多工具-扩展程序">点击 Chrome 浏览器菜单【更多工具】-【扩展程序】。</h3>
+<figure data-type="image" tabindex="1"><img src="https://caolist.github.io/post-images/1566281992705.png" alt="" width="800" loading="lazy"></figure>
+<h3 id="将油猴crx-安装文件拖放到这个页面并确认安装">将“油猴”crx 安装文件拖放到这个页面，并确认安装。</h3>
+<figure data-type="image" tabindex="2"><img src="https://caolist.github.io/post-images/1566281996432.png" alt="" width="800" loading="lazy"></figure>
+<p>需要“油猴”crx 安装文件朋友可以关注我订阅号【巧克力风暴】后在后台回复：<strong>油猴</strong>，就可以直接获取下载地址了。</p>
+<p>注：Firefox 浏览器点击 <a href="https://addons.mozilla.org/zh-CN/firefox/addon/tampermonkey/?src=search">https://addons.mozilla.org/zh-CN/firefox/addon/tampermonkey/?src=search</a> 链接直接安装</p>
+<h2 id="编写屏蔽-mailto-的脚本">编写屏蔽 mailto 的脚本</h2>
+<h3 id="邮件点击油猴图标点击选项">邮件点击“油猴”图标，点击【选项】：</h3>
+<figure data-type="image" tabindex="3"><img src="https://caolist.github.io/post-images/1566282001816.png" alt="" width="800" loading="lazy"></figure>
+<h3 id="点击新建脚本">点击【+】新建脚本：</h3>
+<figure data-type="image" tabindex="4"><img src="https://caolist.github.io/post-images/1566282005547.png" alt="" width="800" loading="lazy"></figure>
+<h3 id="编写屏蔽-mailto-的-javascript-脚本">编写屏蔽 mailto 的 JavaScript 脚本：</h3>
+<figure data-type="image" tabindex="5"><img src="https://caolist.github.io/post-images/1566282010740.png" alt="" width="800" loading="lazy"></figure>
+<h3 id="点击文件标签的保存">点击【文件】标签的【保存】：</h3>
+<figure data-type="image" tabindex="6"><img src="https://caolist.github.io/post-images/1566282015394.png" alt="" width="800" loading="lazy"></figure>
+<h3 id="点击已安装脚本可以看到已安装脚本列表里面有了kill-mailto">点击【已安装脚本】，可以看到已安装脚本列表里面有了【Kill mailto】:</h3>
+<figure data-type="image" tabindex="7"><img src="https://caolist.github.io/post-images/1566282021277.png" alt="" width="800" loading="lazy"></figure>
+<h3 id="关闭油猴选项页面后任意访问一个网站可以发现油猴的图标已经显示一个红色的角标了说明这个脚本已经生效">关闭油猴选项页面后，任意访问一个网站，可以发现“油猴”的图标已经显示一个红色的角标了，说明这个脚本已经生效。</h3>
+<figure data-type="image" tabindex="8"><img src="https://caolist.github.io/post-images/1566282027828.png" alt="" width="800" loading="lazy"></figure>
+<h3 id="点击网站上的邮件链接你会发现没像往常一样有弹出邮件客户端而是弹出了一个对话框邮件地址已经复制到了你的剪切板中-这时你可以在任意输入框-ctrl-v-一下发现邮件地址被粘贴上了">点击网站上的邮件链接，你会发现没像往常一样有弹出邮件客户端，而是弹出了一个对话框【邮件地址已经复制到了你的剪切板中。】，这时你可以在任意输入框 Ctrl + V 一下，发现邮件地址被粘贴上了。</h3>
+<figure data-type="image" tabindex="9"><img src="https://caolist.github.io/post-images/1566282033187.png" alt="" width="800" loading="lazy"></figure>
+<p>具体脚本如下：</p>
+<pre><code class="language-JavaScript">// ==UserScript==
+// @name Kill mailto
+// @namespace
+// @version 0.0.2
+// @author caolist
+// @description
+// @icon 
+// @homepage 
+// @supportURL 
+// @match *://*/*
+// @grant GM_setClipboard
+// ==/UserScript==
+
+window.onload=function(){
+  document.querySelectorAll('p').forEach((el, index, thisArray)=&gt;{
+    el.innerText.match(/[A-Za-z0-9+/]*={0,2}(?=[^&gt;]*(&lt;[^\/script|^\/style]|$))/g).forEach((strMaybeBase64)=&gt;{
+      if(strMaybeBase64.length&gt;0){
+        try{
+          const strText = window.atob(strMaybeBase64)
+          if(strText.match(/^([A-Za-z0-9_\-.])+\@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,6})$/) !== null){
+            const reg = new RegExp(strMaybeBase64+'(?=[^&gt;]*(&lt;(?!\/(script|style))|$))', 'gi')
+            const newCode = '&lt;a href=&quot;mailto:'+strText+'&quot;&gt;'+strText+'&lt;/a&gt;'
+            el.innerHTML = el.innerHTML.replace(reg, newCode)
+          }
+        }
+        catch(e){}
+      }
+    })
+    if(index === thisArray.length-1){
+      document.querySelectorAll('a[href^=mailto]').forEach((thelink)=&gt;{
+        const themail = thelink.href.replace(/^mailto:(.*?@[^?]*).*$/i, '$1')
+        thelink.onclick = function(e){ e.preventDefault(e) }
+        thelink.addEventListener('click', (e)=&gt;{
+          e.preventDefault(e)
+          GM_setClipboard(themail)
+          alert('邮件地址已经复制到了你的剪切板中。')
+          e.preventDefault()
+        })
+      })
+    }
+  })
+}
+</code></pre>
+<h1 id="总结">总结</h1>
+<p>这篇文字的核心其实是“油猴”，他不仅仅只是做到能屏蔽 mailto，更强大的功能值得你去探索。如果有 JavaScript 基础的话，可以试着编写自己需要的功能。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[让你的 iPhone + AirPods 变成“监听器”]]></title>
+        <id>https://caolist.github.io/post/ozVkzLABB/</id>
+        <link href="https://caolist.github.io/post/ozVkzLABB/">
+        </link>
+        <updated>2019-02-26T07:20:50.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>Photo by Vladimir Proskurovskiy on Unsplash</p>
+</blockquote>
+<h1 id="前言">前言</h1>
+<p>前一阵有媒体消息说，苹果在 2019 年会发布新款 AirPods，甚至有黑色版本，这个着实让果粉感到兴奋，拥有 AirPods 的人一定知道它的强大和便捷。如果说在耳机推荐方面，让我推荐一款，AirPods 一定是排名数一数二的，虽然音质没有那么的强大但也足够，更重要的是它和 iPhone 的无感衔接以及无线的爽快。这里还要感谢严女士去年送我的 AirPods，让我有机会体会它的强大。</p>
+<p>这篇文字要说的重点是，如果你手上刚好有 iPhone 和 AirPods，那么你就已经拥有了一款“监听器”。</p>
+<h1 id="怎么做">怎么做？</h1>
+<ol>
+<li>
+<p>打开蓝牙，连接好你的 AirPods。</p>
+</li>
+<li>
+<p>打开设置-控制中心-自定控制，将“听觉”选项添加进来。👇<br>
+<img src="https://caolist.github.io/post-images/1566286154651.jpg" alt="" width="300" loading="lazy"></p>
+</li>
+<li>
+<p>调出控制中心，点击“听觉”图标，也就是那个“耳朵”。👇<br>
+<img src="https://caolist.github.io/post-images/1566286158345.jpg" alt="" width="300" loading="lazy"></p>
+</li>
+<li>
+<p>将实时收听打开，把你的手机放在一个有人说话的地方，带着 AirPods 走远，然后你就明白了。👇<br>
+<img src="https://caolist.github.io/post-images/1566286161853.jpg" alt="" width="300" loading="lazy"></p>
+</li>
+</ol>
+<h1 id="原理">原理</h1>
+<p>请关扫描二维码👇注我的微信订阅号【巧克力风暴】，在后台回复【窃听器】三个字，将会告诉你工作原理。谢谢支持！<br>
+<img src="https://caolist.github.io/post-images/1566286169335.jpg" alt="" width="200" loading="lazy"></p>
+<h1 id="注意">注意</h1>
+<p>这个“窃听器”在 ios 12 上测试通过，其他版本的 ios 不保证有这个功能。</p>
+<h1 id="最后">最后</h1>
+<p>我想苹果公司推出这个功能的初衷应该不是为了让 AirPods 变成“窃听器”，毕竟这个“窃听”的距离也和专业窃听器差太远了。希望大家也仅仅是把这个意外的发现当成游戏来看待，图个乐子，切忌用它来做不道德的事，而且说不定苹果公司以后会取消这个功能。</p>
+<p>如果谁有一些关于 iPhone 的新发现，欢迎分享。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CentOS 7 静默安装 Oracle 11g 笔记]]></title>
+        <id>https://caolist.github.io/post/HCHX14w6g/</id>
+        <link href="https://caolist.github.io/post/HCHX14w6g/">
+        </link>
+        <updated>2019-02-25T09:24:12.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="前言">前言</h1>
+<p>最近工作中在调研各种数据库数据的抽取到大数据平台的方案，其中 Oracle 是一个很重要的部分，但实验平台上没有现成的 Oracle 数据库，因此需要安装，以下为安装过程的记录。</p>
+<h1 id="准备工作">准备工作</h1>
+<ol>
+<li>CentOS 操作系统自行安装（64位），网络自行配置</li>
+<li>下载Oracle安装包：<br>
+linux.x64_11gR2_database_1of2.zip<br>
+linux.x64_11gR2_database_2of2.zip<br>
+下载地址：<a href="https://www.oracle.com/technetwork/database/enterprise-edition/downloads/112010-linx8664soft-100572.html">https://www.oracle.com/technetwork/database/enterprise-edition/downloads/112010-linx8664soft-100572.html</a></li>
+</ol>
+<h1 id="安装过程">安装过程</h1>
+<h2 id="配置-yum-源">配置 yum 源</h2>
+<pre><code>$ cd /etc
+$ mv yum.repos.d yum.repos.d.bak
+$ mkdir yum.repos.d
+$ wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+$ yum clean all
+$ yum makecache
+</code></pre>
+<h2 id="安装依赖包">安装依赖包</h2>
+<pre><code>$ yum -y install binutils \
+$ compat-libstdc++-33 \
+$ elfutils-libelf \
+$ elfutils-libelf-devel \
+$ expat \
+$ gcc \
+$ gcc-c++ \
+$ glibc \
+$ glibc-common \
+$ glibc-devel \
+$ glibc-headers \
+$ libaio \
+$ libaio-devel \
+$ libgcc \
+$ libstdc++ \
+$ libstdc++-devel \
+$ make \
+$ pdksh \
+$ sysstat \
+$ unixODBC \
+$ unixODBC-devel
+</code></pre>
+<h2 id="检查依赖是否安装完整">检查依赖是否安装完整</h2>
+<pre><code>$ rpm -q \
+$ binutils \
+$ compat-libstdc++-33 \
+$ elfutils-libelf \
+$ elfutils-libelf-devel \
+$ expat \
+$ gcc \
+$ gcc-c++ \
+$ glibc \
+$ glibc-common \
+$ glibc-devel \
+$ glibc-headers \
+$ libaio \
+$ libaio-devel \
+$ libgcc \
+$ libstdc++ \
+$ libstdc++-devel \
+$ make \
+$ pdksh \
+$ sysstat \
+$ unixODBC \
+$ unixODBC-devel | grep &quot;not installed&quot;
+</code></pre>
+<p>发现 pdksh 没有安装：<br>
+通过 yum install pdksh -y 安装缺少 package<br>
+通过 wget 命令直接下载 pdksh 的 rpm 包到至 /tmp/</p>
+<pre><code>$ wget -O /tmp/pdksh-5.2.14-37.el5_8.1.x86_64.rpm http://vault.centos.org/5.11/os/x86_64/CentOS/pdksh-5.2.14-37.el5_8.1.x86_64.rpm
+</code></pre>
+<p>安装 pdksh：</p>
+<pre><code>$ rpm -ivh pdksh-5.2.14-37.el5_8.1.x86_64.rpm
+</code></pre>
+<p>执行之前的命令再次检查依赖包是否安装完整</p>
+<h2 id="添加-oracle-用户组和用户">添加 oracle 用户组和用户</h2>
+<pre><code>$ groupadd oinstall
+$ groupadd dba
+$ groupadd asmadmin
+$ groupadd asmdba
+$ useradd -g oinstall -G dba,asmdba oracle -d /home/oracle
+</code></pre>
+<h2 id="查看-oracle-用户">查看 oracle 用户</h2>
+<pre><code>$ id oracle
+</code></pre>
+<h2 id="初始化-oracle-用户的密码">初始化 oracle 用户的密码</h2>
+<pre><code>$ passwd oracle
+</code></pre>
+<h2 id="配置-hostname">配置 hostname</h2>
+<pre><code>$ vim /etc/hosts
+</code></pre>
+<p>添加内容：</p>
+<pre><code>x.x.x.x（本机 IP） oracle
+</code></pre>
+<p>测试 hostname：</p>
+<pre><code>$ ping -c 3 oracle
+</code></pre>
+<h2 id="优化-os-内核参数">优化 OS 内核参数</h2>
+<p>kernel.shmmax 参数设置为物理内存的一半</p>
+<pre><code>$ vim /etc/sysctl.conf
+</code></pre>
+<p>设置内容为：</p>
+<pre><code>fs.aio-max-nr=1048576
+fs.file-max=6815744
+kernel.shmall=2097152
+kernel.shmmni=4096
+kernel.shmmax = 536870912
+kernel.sem=250 32000 100 128
+net.ipv4.ip_local_port_range=9000 65500
+net.core.rmem_default=262144
+net.core.rmem_max=4194304
+net.core.wmem_default=262144
+net.core.wmem_max=1048586
+</code></pre>
+<p>使参数生效：</p>
+<pre><code>$ sysctl -p
+</code></pre>
+<h2 id="限制-oracle-用户的-shell-权限">限制 oracle 用户的 shell 权限</h2>
+<pre><code>$ vim /etc/security/limits.conf
+</code></pre>
+<p>在末尾添加：</p>
+<pre><code>oracle soft nproc 2047
+oracle hard nproc 16384
+oracle soft nofile 1024
+oracle hard nofile 65536
+oracle soft stack 10240
+oracle hard stack 10240
+</code></pre>
+<pre><code>$ vim /etc/pam.d/login
+</code></pre>
+<pre><code>session required /lib64/security/pam_limits.so
+session required pam_limits.so
+</code></pre>
+<pre><code>$ vim /etc/profile
+</code></pre>
+<pre><code>if [ $USER = &quot;oracle&quot; ]; then
+    if [ $SHELL = &quot;/bin/ksh&quot; ]; then
+        ulimit -p 16384
+        ulimit -n 65536
+    else
+        ulimit -u 16384 -n 65536
+    fi
+fi
+</code></pre>
+<p>使之生效：</p>
+<pre><code>$ source /etc/profile
+</code></pre>
+<h2 id="创建-oracle-安装目录">创建 oracle 安装目录</h2>
+<pre><code>$ mkdir -p /db/app/oracle/product/11.2.0
+$ mkdir /db/app/oracle/oradata
+$ mkdir /db/app/oracle/inventory
+$ mkdir /db/app/oracle/fast_recovery_area
+$ chown -R oracle:oinstall /db/app/oracle
+$ chmod -R 775 /db/app/oracle
+</code></pre>
+<h2 id="配置-oracle-用户环境变量">配置 oracle 用户环境变量</h2>
+<p>切换 oracle 用户登陆后配置环境变量：</p>
+<pre><code>$ su - oracle 
+$ vim .bash_profile
+</code></pre>
+<pre><code>export ORACLE_HOSTNAME=oracle
+export ORACLE_BASE=/db/app/oracle
+export ORACLE_HOME=$ORACLE_BASE/product/11.2.0/
+export ORACLE_SID=ORCL
+export PATH=.:$ORACLE_HOME/bin:$ORACLE_HOME/OPatch:$ORACLE_HOME/jdk/bin:$PATH
+export LC_ALL=&quot;en_US&quot;
+export LANG=&quot;en_US&quot;
+export NLS_LANG=&quot;AMERICAN_AMERICA.ZHS16GBK&quot;
+export NLS_DATE_FORMAT=&quot;YYYY-MM-DD HH24:MI:SS&quot;
+</code></pre>
+<p>以上配置完成后，建议重启系统：</p>
+<pre><code>$ reboot
+</code></pre>
+<h2 id="解压-oracle-压缩文件到-db">解压 oracle 压缩文件到 /db</h2>
+<pre><code>$ cd /db/
+$ unzip linux.x64_11gR2_database_1of2.zip -d /db
+$ unzip linux.x64_11gR2_database_2of2.zip -d /db
+</code></pre>
+<p>解压完成后：</p>
+<pre><code>$ mkdir /db/etc/
+$ cp /db/database/response/* /db/etc/
+$ vim /db/etc/db_install.rsp
+</code></pre>
+<pre><code>oracle.install.option=INSTALL_DB_SWONLY
+DECLINE_SECURITY_UPDATES=true
+UNIX_GROUP_NAME=oinstall
+INVENTORY_LOCATION=/db/app/oracle/inventory
+SELECTED_LANGUAGES=en,zh_CN
+ORACLE_HOSTNAME=oracle
+ORACLE_HOME=/db/app/oracle/product/11.2.0
+ORACLE_BASE=/db/app/oracle
+oracle.install.db.InstallEdition=EE
+oracle.install.db.isCustomInstall=true
+oracle.install.db.DBA_GROUP=dba
+oracle.install.db.OPER_GROUP=dba
+</code></pre>
+<p>开始安装：</p>
+<pre><code>$ su - oracle
+$ ./runInstaller -silent -ignorePrereq -responseFile /home/oracle/etc/db_install.rsp
+</code></pre>
+<p>安装期间可以使用tail命令监看 oracle 的安装日志：</p>
+<pre><code>$ tail -f /db/app/oracle/inventory/logs/installActions*.log
+</code></pre>
+<p>安装完成，提示 Successfully Setup Software.</p>
+<p>使用 root 用户执行脚本：</p>
+<pre><code>$ su - root
+$ /db/app/oraInventory/orainstRoot.sh
+$ /db/app/oracle/product/11.2.0/root.sh
+</code></pre>
+<p>增加或修改 oracle 的环境变量：</p>
+<pre><code>$ su  - oracle
+$ vim ~/.bash_profile
+</code></pre>
+<pre><code>export ORACLE_BASE=/db/app/oracle
+export ORACLE_SID=orcl
+export ROACLE_PID=ora11g
+export LD_LIBRARY_PATH=$ORACLE_HOME/lib:/usr/lib
+export ORACLE_HOME=/db/app/oracle/product/11.2.0/
+export PATH=$PATH:$ORACLE_HOME/bin
+export LANG=&quot;zh_CN.UTF-8&quot;
+export NLS_LANG=&quot;SIMPLIFIED CHINESE_CHINA.AL32UTF8&quot;
+export NLS_DATE_FORMAT='yyyy-mm-dd hh24:mi:ss'
+</code></pre>
+<h2 id="配置监听程序">配置监听程序</h2>
+<pre><code>$ netca /silent/responsefile/home/oracle/etc/netca.rsp
+</code></pre>
+<h2 id="查看监听端口">查看监听端口</h2>
+<pre><code>$ netstat -tnulp | grep 1521
+</code></pre>
+<h2 id="启动监控程序">启动监控程序</h2>
+<pre><code>$ lsnrctl start
+</code></pre>
+<h2 id="静默创建数据库">静默创建数据库</h2>
+<pre><code>$ vim /etc/dbca.rsp
+</code></pre>
+<p>TOTALMEMORY 设置为总内存的 80%</p>
+<pre><code>GDBNAME = &quot;orcl&quot;
+SID = &quot;orcl&quot;
+SYSPASSWORD = &quot;oracle&quot;
+SYSTEMPASSWORD = &quot;oracle&quot;
+SYSMANPASSWORD = &quot;oracle&quot;
+DBSNMPPASSWORD = &quot;oracle&quot;
+DATAFILEDESTINATION =/db/app/oracle/oradata
+RECOVERYAREADESTINATION=/db/app/oracle/fast_recovery_area
+CHARACTERSET = &quot;AL32UTF8&quot;
+TOTALMEMORY = &quot;1638&quot;
+</code></pre>
+<h2 id="执行静默建库">执行静默建库</h2>
+<pre><code>$ dbca -silent -responseFile /db/etc/dbca.rsp
+</code></pre>
+<h2 id="查看-oracle-实例进程">查看 oracle 实例进程</h2>
+<pre><code>$ ps -ef | grep ora_ | grep -v grep
+</code></pre>
+<h2 id="查看监听状态">查看监听状态</h2>
+<pre><code>$ lsnrctl status
+</code></pre>
+<h2 id="登录-sqlplus">登录 sqlplus</h2>
+<p>查看实例状态：</p>
+<pre><code>$ sqlplus / as sysdba
+select status from v$instance;
+</code></pre>
+<p>查看数据库编码：</p>
+<pre><code>select userenv('language') from dual;
+</code></pre>
+<p>查看数据库版本信息：</p>
+<pre><code>select * from v$version;
+</code></pre>
+<p>激活 scott 用户：</p>
+<pre><code>alter user scott account unlock;
+alter user scott identified by tiger;
+select username,account_status from all_users;
+</code></pre>
+<h2 id="防火墙开放1521端口">防火墙开放1521端口</h2>
+<pre><code>$ firewall-cmd --zone=public --add-port=1521/tcp --permanent
+$ firewall-cmd --reload
+</code></pre>
+<h1 id="总结">总结</h1>
+<p>在 Linux 上安装配置 Oracle 确实是一个比较繁复的过程，耗时比较多，但纵观上下其实流程还是很清晰的，只要明白其中原理，细心执行步骤，安装成功水到渠成。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[iOS 版手机迅雷的安装方法]]></title>
+        <id>https://caolist.github.io/post/-cqK5Ew6x/</id>
+        <link href="https://caolist.github.io/post/-cqK5Ew6x/">
+        </link>
+        <updated>2019-02-21T01:25:36.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="前言">前言</h1>
+<p>如果想要在苹果手机上下载通过<strong>磁力链接</strong><sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>分享的文件该怎么做呢？答案是安装迅雷 App。但众所周知，在苹果手机上的应用商店里无法下载到迅雷 App，因此我们智能绕过 AppStore 通过别的方式安装手机迅雷。</p>
+<h1 id="步骤">步骤</h1>
+<ol>
+<li>用 ios 自带的 Safari 浏览器打开一个安装链接，因为安装链接时不时会更新，所以获取最新链接请长按或扫描下面二维码关注我的订阅号，后台回复【迅雷】两个字。👇<br>
+<img src="https://caolist.github.io/post-images/1566181942388.jpg" alt="巧克力风暴" width="200" loading="lazy"></li>
+<li>点击【立即安装内测版】。👇<br>
+<img src="https://caolist.github.io/post-images/1566181909950.jpg" alt="" width="360" loading="lazy"></li>
+<li>弹出对话框，点击【安装】，返回桌面可以看到系统正在安装迅雷 Beta，等待安装完毕后打开手机设置-通用-设备管理-选择-信任后，即可正常使用。👇<br>
+<img src="https://caolist.github.io/post-images/1566181913096.jpg" alt="" width="360" loading="lazy"></li>
+<li>至于怎么使用它下载文件，大家应该都很熟悉，至于要下载什么内容，自己负责。<br>
+<img src="https://caolist.github.io/post-images/1566181916190.jpg" alt="" width="360" loading="lazy"></li>
+</ol>
+<h1 id="总结">总结</h1>
+<p>至此，苹果手机用户解决了没有合适的 P2P 下载软件的尴尬，有了手机版迅雷以后，有时候可以省掉要专门登录 PC 去下载文件的烦恼。<br>
+实际测试非迅雷会员的情况下，下载速度还算不错，有需要的朋友可以试试看。</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>磁力链接（Magnet URI scheme），是对等网络中进行信息检索和下载文档的计算机程序。和基于“位置”连接的统一资源定位符不同，磁力链接是基于元数据（metadata）文件内容，属于统一资源名称。也就是说，磁力链接不基于文档的IP地址或定位符，而是在分布式数据库中，通过散列函数值来识别、搜索来下载文档。因为不依赖一个处于启动状态的主机来下载文档，所以特别适用没有中心服务器的对等网络。尽管它匹配开源标准，却被垄断信息资源和监控用户行为的个人、组织、企业和政府拒之门外。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[微信上线支付分对标芝麻信用分，教你如何开通！]]></title>
+        <id>https://caolist.github.io/post/6uRkU195s/</id>
+        <link href="https://caolist.github.io/post/6uRkU195s/">
+        </link>
+        <updated>2019-02-14T06:43:59.000Z</updated>
+        <content type="html"><![CDATA[<p>支付宝很早以前就推出了芝麻信用分，相信大家应该都开通并正在使用，它的高低在一定程度上可以反映一个人的信用状况，可以用来做某些租赁服务的免押金门槛，甚至可以作为申请加拿大签证的重要资料，非常实用。类似的我知道京东有小白信用，可能比较小众，功能基本类似，没想到微信有朝一日也推出了自己的信用分产品，只是目前没有正式开通，但我们依然有办法提前体验一把，看看自己的分数是多少。</p>
+<p>目前微信的支付分只能通过扫描借充电宝的二维码来开通。</p>
+<p>感兴趣的朋友可以关注我公众号后在后台回复：<strong>支付分</strong>，就可以直接获取到二维码长按扫描开通了。<br>
+<img src="https://caolist.github.io/post-images/1566289834992.jpg" alt="" width="200" loading="lazy"></p>
+<p><strong>扫描下方二维码后，点击免押金租借，然后选择开通并申请权益即可，切记不要点下一步，开通成功即可返回。如遇排队人数多，请多尝试几次或者晚点再试。</strong></p>
+<p>具体步骤如下：</p>
+<p>识别二维码后，我们进入到借充电宝的界面。👇<br>
+<img src="https://caolist.github.io/post-images/1566289843133.jpg" alt="" width="300" loading="lazy"></p>
+<p>然后点击下方的“免押金租借”接着就会跳转到开通微信支付分的界面，点击下方的“开通并申请权益”进行一些验证操作即可。</p>
+<p>这样就成功开通微信支付分了，在“我的分数”一栏里就可以看到具体分数。👇<br>
+<img src="https://caolist.github.io/post-images/1566289847950.jpg" alt="" width="300" loading="lazy"></p>
+<p>**注意！**到这个界面千万不要点下一步，因为再下一步就是借出充电宝了，到这一步已经开通支付分，退出小程序即可。</p>
+<p>如果要查看或者关闭微信支付分，点击“我”-“支付”-“钱包”，就可以看到支付分的入口，点击右上角的菜单可以选择关闭。👇<br>
+<img src="https://caolist.github.io/post-images/1566289852806.jpg" alt="" width="300" loading="lazy"><br>
+<img src="https://caolist.github.io/post-images/1566289857392.jpg" alt="" width="300" loading="lazy"><br>
+<img src="https://caolist.github.io/post-images/1566289861743.jpg" alt="" width="300" loading="lazy"></p>
+<p>我这里的支付分是 <strong>645</strong>，大家的支付分是多少呢？不知道微信支付分的评分规则是什么，但肯定是越高越好了吧。 欢迎在留言区分享一下你的支付分。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[iPhone 批量移动图标的小技巧]]></title>
+        <id>https://caolist.github.io/post/bYm2IN8SD/</id>
+        <link href="https://caolist.github.io/post/bYm2IN8SD/">
+        </link>
+        <updated>2019-02-12T01:42:45.000Z</updated>
+        <content type="html"><![CDATA[<p>使用苹果手机的朋友们有时会面临一个问题：该怎样一次移动多个应用图标到另外一个分屏或者一个文件夹呢？难道只有安卓手机才支持这种便捷操作？！</p>
+<p>这里告诉大家一个办法，不用越狱也不用换手机，很简单。</p>
+<ol>
+<li>用一个手指长按不要按到底并轻微移动某一个应用图标，主意这个轻微移动最重要！</li>
+<li>然后再用另外一个手指轻点其他应用图标，就能将这些图标合并到第一个手指下的图标了。</li>
+<li>移动这个合并后的图标，就可以把这些图标批量移动到任意位置了。</li>
+<li>补充一下，当第一个手指下合并了多个应用图标之后，移动这个手指到另外一个应用图标或者文件夹之上，就能创建新的文件夹或者添加进原有文件夹了。</li>
+</ol>
+<p>关于这个操作，我录了一个短视频，供大家参考。</p>
+<figure data-type="image" tabindex="1"><img src="https://caolist.github.io/post-images/1566284889811.GIF" alt="" loading="lazy"></figure>
+<p>注意：这个操作我是在 ios 12 的版本下验证过的，ios 10 没有这个功能，手头上没有 ios 11 及 ios 10 以下版本的苹果手机，因此不知道其他系统版本是否有这个功能，大家可以试一试亲自试一试。</p>
+]]></content>
+    </entry>
+</feed>

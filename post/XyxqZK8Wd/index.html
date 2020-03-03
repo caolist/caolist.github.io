@@ -1,0 +1,207 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>关闭 Windows 平台 Google Chrome 浏览器的跨域警告（新旧版本两种设置方法） | caolist&#39;s personal Blog</title>
+<link rel="shortcut icon" href="https://caolist.github.io/favicon.ico?v=1583221154581">
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="https://caolist.github.io/styles/main.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/go.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+<!-- DEMO JS -->
+<script src="media/scripts/index.js"></script>
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            caolist&#39;s personal Blog
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+        </div>
+    </div>
+</nav>
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    关闭 Windows 平台 Google Chrome 浏览器的跨域警告（新旧版本两种设置方法）
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2019-01-11 ·
+                    </time>
+                    
+                        <a href="https://caolist.github.io/tag/R9PHmq62y/" class="post-tags">
+                            # 软件开发
+                        </a>
+                    
+                        <a href="https://caolist.github.io/tag/TMtphP5If3/" class="post-tags">
+                            # Chrome
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>进行前后分离 web 开发的时候，出于一些原因往往需要将浏览器设置成支持跨域的模式，好在 chrome 浏览器就是支持可跨域的设置，网上也有很多 chrome 跨域设置教程。但是新版本的chrome 浏览器提高了跨域设置的门槛，原来的方法不再适用了。下面简单介绍一下新旧版本 chrome 浏览器关闭跨域警告的设置方法。</p>
+<h2 id="旧版本的设置方法">旧版本的设置方法</h2>
+<p>直接在打开命令上加 --disable-web-security 就可以了。具体做法为：</p>
+<ol>
+<li>下载并安装 chorme 浏览器后，在桌面找到浏览器快捷图标并点击鼠标右键的属性一栏。</li>
+<li>在属性页面中的目标输入框里后面加上 --disable-web-security（注意前面有一个空格），如下图所示：<br>
+<img src="https://caolist.github.io/post-images/1566287532158.png" alt="" loading="lazy"></li>
+<li>接着点击应用和确定后关闭属性页面，并打开 chrome 浏览器。如果浏览器出现提示“你使用的是不受支持的命令标记 --disable-web-security”，那么说明配置成功。</li>
+</ol>
+<h2 id="新版本的设置方法">新版本的设置方法</h2>
+<p>chrome 的版本升到更新的版本之后（具体是哪一个版本没有考证），关闭跨域设置比以前严格了，在打开命令上加 --disable-web-security 之后还需要给出新的用户个人信息的目录。众所周知 chrome 是需要用 gmail 地址登录的浏览器，登录后就会生成一个存储个人信息的目录，保存用户的收藏、历史记录等个人信息。新版本之后，如果设置 chrome 浏览器为支持跨域模式，需要指定出一个个人信息目录，而不能使用默认的目录，估计是 chrome 浏览器怕用户勿使用跨域模式泄露自己的个人信息（主要是 cookie，很多网站的登录 token 信息都是保存在 cookie 里）。具体做法为：</p>
+<ol>
+<li>在电脑上任意位置新建一个目录，例如：C:\MyChromeDevUserData</li>
+<li>在属性页面中的目标输入框里加上 --disable-web-security --user-data-dir=C:\MyChromeDevUserData，--user-data-dir 的值就是刚才新建的目录地址。<br>
+<img src="https://caolist.github.io/post-images/1566287537765.png" alt="" loading="lazy"></li>
+<li>点击应用和确定后关闭属性页面，并打开 chrome 浏览器。再次打开 chrome，发现有“--disable-web-security”相关的提示，说明 chrome 可以正常进行跨域工作了。<br>
+<img src="https://caolist.github.io/post-images/1566287542371.png" alt="" loading="lazy"><br>
+跨域成功后，首页换成了 google 的 welcome 页面，同时原来收藏的链接和历史记录都不见了，而 C:\MyChromeDevUserData 目录下则生成了新的个人信息相关文件。<br>
+<img src="https://caolist.github.io/post-images/1566287546069.png" alt="" loading="lazy"></li>
+</ol>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://caolist.github.io/post/34Zhtonc8/" class="post-title gt-a-link">
+                    经常使用的英文名所代表的含义（男生篇）
+                </a>
+            </div>
+        
+
+        
+            
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'a0326ada9cc2fac32f54',
+    clientSecret: 'a301f656a89e221386d5c5fc4d3b8ba740a2bcdb',
+    repo: 'caolist.github.io',
+    owner: 'caolist',
+    admin: ['caolist'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+            
+
+            
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">千里之行，始于足下。</div>
+    <div class="social-container">
+        
+            
+                <a href="https://github.com/caolist" target="_blank">
+                    <i class="fab fa-github gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+                <a href="https://weibo.com/caoyuli" target="_blank">
+                    <i class="fab fa-weibo gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    Copyright &copy; 2020 caolist.top  All Rights Reserved.
+</br>
+Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a href="https://caolist.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+    hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+</div>
+</body>
+</html>

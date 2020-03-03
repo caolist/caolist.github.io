@@ -1,0 +1,375 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>使用 Sqoop 操作 DB2 服务器笔记 | caolist&#39;s personal Blog</title>
+<link rel="shortcut icon" href="https://caolist.github.io/favicon.ico?v=1583221154581">
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="https://caolist.github.io/styles/main.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/go.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+<!-- DEMO JS -->
+<script src="media/scripts/index.js"></script>
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            caolist&#39;s personal Blog
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+        </div>
+    </div>
+</nav>
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    使用 Sqoop 操作 DB2 服务器笔记
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2019-01-22 ·
+                    </time>
+                    
+                        <a href="https://caolist.github.io/tag/-jQYpMoON7/" class="post-tags">
+                            # 数据库
+                        </a>
+                    
+                        <a href="https://caolist.github.io/tag/iOTo4craw1/" class="post-tags">
+                            # 大数据
+                        </a>
+                    
+                        <a href="https://caolist.github.io/tag/ooMKqUEKH4/" class="post-tags">
+                            # DB2
+                        </a>
+                    
+                        <a href="https://caolist.github.io/tag/eF2jMI-75y/" class="post-tags">
+                            # Sqoop
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <h3 id="db2-101-部署">DB2 10.1 部署</h3>
+<p>操作系统：centOS 7<br>
+DB2 版本：10.1</p>
+<h4 id="一-解压-tar-文件">一、解压 tar 文件</h4>
+<pre><code class="language-shell">$ tar -zxvf db2_v101_linuxx64_expc.tar.gz
+</code></pre>
+<p>解压之后，生成一个 expc 的目录文件。</p>
+<pre><code class="language-shell">$ ls
+db2  db2ckupgrade  db2_deinstall  db2_install  db2ls  db2prereqcheck  db2setup
+</code></pre>
+<h4 id="二检验安装的先决条件">二，检验安装的先决条件</h4>
+<pre><code class="language-shell">$ ./db2prereqcheck
+</code></pre>
+<p>将缺失的依赖安装好。</p>
+<h4 id="三-进行安装">三、进行安装</h4>
+<pre><code class="language-shell">./db2_install
+</code></pre>
+<p>刚开始的时候，需要输入两次yes，同意协议，同意安装路径。<br>
+之后就都自动了。<br>
+接下来创建用户组。</p>
+<pre><code class="language-shell">$ groupadd -g 2000
+$ groupadd -g 2001
+$ useradd -m -g db2iadm1 -d /home/db2inst1db2inst1
+$ useradd -m -g db2fadm1 -d /home/db2fenc1 db2fenc1
+$ passwd db2inst1
+</code></pre>
+<p>密码输入后自己记录下来。</p>
+<h4 id="四-注册">四、注册</h4>
+<pre><code class="language-shell">$ cd /opt/ibm/db2/V11.1/adm/
+$ chmod -R 775 *
+</code></pre>
+<p>这里是自己的软件安装目录。</p>
+<pre><code class="language-shell">$ ./db2licm -a /home/software/expc/db2/license/db2expc_uw.lic
+
+LIC1402I  License added successfully.
+LIC1426I  This product is now licensed for use as outlined in your License Agreement.  USE OF THE PRODUCT CONSTITUTES ACCEPTANCE OF THE TERMS OF THE IBM LICENSE AGREEMENT, LOCATED IN THE FOLLOWING DIRECTORY: &quot;/opt/ibm/db2/V11.1/license/zh_CN.utf8&quot;
+</code></pre>
+<h4 id="五-绑定端口号">五、绑定端口号</h4>
+<pre><code class="language-shell">$ cd /opt/ibm/db2/V11.1/instance/
+$ chmod -R 775 *
+$ ./db2icrt -p 50000 -u db2fenc1 db2inst1
+DBI1446I  The db2icrt command is running.
+DB2 installation is being initialized.
+Total number of tasks to be performed: 4
+Total estimated time for all tasks to be performed: 309 second(s)
+Task #1 start
+Description: Setting default global profile registry variables
+Estimated time 1 second(s)
+Task #1 end
+Task #2 start
+Description: Initializing instance list
+Estimated time 5 second(s)
+Task #2 end
+Task #3 start
+Description: Configuring DB2 instances
+Estimated time 300 second(s)
+Task #3 end
+Task #4 start
+Description: Updating global profile registry
+Estimated time 3 second(s)
+Task #4 end
+The execution completed successfully.
+For more information see the DB2 installation log at &quot;/tmp/db2icrt.log.5871&quot;.
+DBI1070I  Program db2icrt completed successfully.
+</code></pre>
+<h4 id="六-完成安装">六、完成安装</h4>
+<p>要切换到实例用户，才可以登录db2数据库。</p>
+<pre><code class="language-shell">$ su - db2inst1
+</code></pre>
+<p>创建样本数据库。</p>
+<pre><code class="language-shell">$ db2sampl
+Starting the DB2 instance...
+Creating database &quot;SAMPLE&quot;...
+Connecting to database &quot;SAMPLE&quot;...
+Creating tables and data in schema &quot;DB2INST1&quot;...
+Creating tables with XML columns and XML data in schema &quot;DB2INST1&quot;...
+Stopping the DB2 instance...
+'db2sampl' processing complete.
+$ db2start
+SQL1063N  DB2START processing was successful.
+$ db2 connect to sample
+Database Connection Information
+Database server        = DB2/LINUXX8664 11.1.2.2
+SQL authorization ID   = DB2INST1
+Local database alias   = SAMPLE
+$ db2 &quot;select * from staff&quot;
+$ db2licm -l
+Product name:                     &quot;DB2 Express-C&quot;
+License type:                     &quot;Unwarranted&quot;
+Expiry date:                      &quot;Permanent&quot;
+Product identifier:               &quot;db2expc&quot;
+Version information:              &quot;11.1&quot;
+Max number of CPUs:               &quot;2&quot;
+Max amount of memory (GB):        &quot;16&quot;
+Max number of cores:              &quot;2&quot;
+Enforcement policy:               &quot;Soft Stop&quot;
+</code></pre>
+<h4 id="七-配置-odbc-连接">七、配置 ODBC 连接</h4>
+<p>添加DB2端口在文件。</p>
+<pre><code class="language-shell">$ vim /etc/services
+</code></pre>
+<p>加入下面一行：</p>
+<pre><code class="language-shell">db2inst  50000/tcp
+</code></pre>
+<p>添加 DB2 配置。</p>
+<pre><code class="language-shell">$ su - db2inst1
+</code></pre>
+<p>下面都是以 用户db2inst1 来运行。</p>
+<pre><code class="language-shell">$ db2set DB2_EXTENDED_OPTIMIZATION=ON
+$ db2set DB2_DISABLE_FLUSH_LOG=ON
+$ db2set AUTOSTART=YES
+$ db2set DB2_STRIPED_CONTAINERS=ON
+$ db2set DB2_HASH_JOIN=Y
+$ db2set DB2COMM=tcpip
+$ db2set DB2_PARALLEL_IO=*
+$ db2set DB2CODEPAGE=819#Update dbm cfg
+</code></pre>
+<p>配置 TCP/IP Service name。</p>
+<pre><code class="language-shell">$ db2 update dbm cfg using SVCENAME db2inst
+DB20000I The UPDATE DATABASE MANAGER CONFIGURATION command completed
+successfully. 
+$ db2 update dbm cfg using INDEXREC ACCESS
+DB20000I The UPDATE DATABASE MANAGER CONFIGURATION command completed
+successfully.
+</code></pre>
+<p>在 ibm 官网下载 DB2 客户端工具：<br>
+ibm_data_server_client_winx64_v11.1.zip<br>
+解压后进行安装<br>
+然后在 Widows 端打开 ODBC 数据源管理程序，进行以下图示操作：<br>
+<img src="https://caolist.github.io/post-images/1566182887578.png" alt="" loading="lazy"><br>
+<img src="https://caolist.github.io/post-images/1566182892653.png" alt="" loading="lazy"><br>
+<img src="https://caolist.github.io/post-images/1566182895882.png" alt="" loading="lazy"><br>
+<img src="https://caolist.github.io/post-images/1566182902485.png" alt="" loading="lazy"><br>
+<img src="https://caolist.github.io/post-images/1566182906500.png" alt="" loading="lazy"><br>
+<img src="https://caolist.github.io/post-images/1566182910583.png" alt="" loading="lazy"><br>
+<img src="https://caolist.github.io/post-images/1566182914249.png" alt="" loading="lazy"><br>
+连接成功，之后可以通过 ODBC 对所部署的 DB2 服务进行操作。</p>
+<h3 id="sqoop-部署">sqoop 部署</h3>
+<p>操作系统：centOS 7<br>
+DB2 版本：1.4.7</p>
+<h4 id="一-解压-tar-文件-2">一、解压 tar 文件</h4>
+<pre><code class="language-shell">$ tar -zxvf sqoop-1.4.7.bin__hadoop-2.6.0.tar.gz
+</code></pre>
+<h4 id="二-配置环境变量">二、配置环境变量</h4>
+<pre><code class="language-shell">$ vim /etc/profile
+</code></pre>
+<pre><code class="language-shell">export SQOOP_HOME=/opt/sqoop-1.4.7.bin__hadoop-2.6.0
+export CLASSPATH=$CLASSPATH:$SQOOP_HOME/lib
+export PATH=$PATH:$SQOOP_HOME/bin
+</code></pre>
+<pre><code class="language-shell">$ source /etc/profile
+</code></pre>
+<h4 id="三-导入-jdbc-驱动包">三、导入 JDBC 驱动包</h4>
+<p>导入 JDBC 驱动 jar 包。<br>
+将 db2jcc.jar、db2jcc4.jar、db2jcc_license_cu.jar 包导入到 /usr/share/java/ 或者 /opt/sqoop-1.4.7.bin__hadoop-2.6.0/lib 路径下。</p>
+<h4 id="四-验证是否连接成功">四、验证是否连接成功</h4>
+<p>执行命令：</p>
+<pre><code class="language-shell">$ sqoop list-databases --connect jdbc:db2://localhost:50000/sample --username db2inst1 -P
+</code></pre>
+<p>输入 db2inst1 用户对应的密码。</p>
+<pre><code class="language-shell">Warning: /opt/cloudera/parcels/CDH-5.14.0-1.cdh5.14.0.p0.24/bin/../lib/sqoop/../accumulo does not exist! Accumulo imports will fail.
+Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+19/01/22 13:55:59 INFO sqoop.Sqoop: Running Sqoop version: 1.4.6-cdh5.14.0
+Enter password: 
+19/01/22 13:56:03 INFO manager.SqlManager: Using default fetchSize of 1000
+DB2INST1
+NULLID
+SQLJ
+SYSCAT
+SYSFUN
+SYSIBM
+SYSIBMADM
+SYSIBMINTERNAL
+SYSIBMTS
+SYSPROC
+SYSPUBLIC
+SYSSTAT
+SYSTOOLS
+</code></pre>
+<p>终端显示出 SAMPLE 下所有的数据库列表，说明 sqoop 连接 DB2 服务器成功，接下来可以使用 sqoop 对 DB2 服务器的数据进行各种操作。</p>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://caolist.github.io/post/_WRc7Ks6m/" class="post-title gt-a-link">
+                    如何在手机上查看搜索引擎快照？
+                </a>
+            </div>
+        
+
+        
+            
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'a0326ada9cc2fac32f54',
+    clientSecret: 'a301f656a89e221386d5c5fc4d3b8ba740a2bcdb',
+    repo: 'caolist.github.io',
+    owner: 'caolist',
+    admin: ['caolist'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+            
+
+            
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">千里之行，始于足下。</div>
+    <div class="social-container">
+        
+            
+                <a href="https://github.com/caolist" target="_blank">
+                    <i class="fab fa-github gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+                <a href="https://weibo.com/caoyuli" target="_blank">
+                    <i class="fab fa-weibo gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    Copyright &copy; 2020 caolist.top  All Rights Reserved.
+</br>
+Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a href="https://caolist.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+    hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+</div>
+</body>
+</html>

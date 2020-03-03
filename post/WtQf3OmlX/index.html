@@ -1,0 +1,267 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>屏蔽网页点击邮件链接弹出邮件客户端 | caolist&#39;s personal Blog</title>
+<link rel="shortcut icon" href="https://caolist.github.io/favicon.ico?v=1583221154581">
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="https://caolist.github.io/styles/main.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/go.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+<!-- DEMO JS -->
+<script src="media/scripts/index.js"></script>
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            caolist&#39;s personal Blog
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+        </div>
+    </div>
+</nav>
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    屏蔽网页点击邮件链接弹出邮件客户端
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2019-03-08 ·
+                    </time>
+                    
+                        <a href="https://caolist.github.io/tag/hIq9PiRjli/" class="post-tags">
+                            # 浏览器插件
+                        </a>
+                    
+                        <a href="https://caolist.github.io/tag/TMtphP5If3/" class="post-tags">
+                            # Chrome
+                        </a>
+                    
+                        <a href="https://caolist.github.io/tag/XwBWbcZYlD/" class="post-tags">
+                            # JavaScript
+                        </a>
+                    
+                        <a href="https://caolist.github.io/tag/icxctaIS6e/" class="post-tags">
+                            # 前端开发
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <h1 id="前言">前言</h1>
+<p><strong>mailto:</strong> 是很多网页上都会使用的电子邮件联系链接，只需要点一下就能打开邮件客户端。然而，对于大多数人来说，这个操作很不友好，希望关闭这个功能。要关闭它，其实不那么难。</p>
+<h1 id="步骤">步骤</h1>
+<h2 id="给浏览器安装油猴浏览器扩展应用">给浏览器安装“油猴”浏览器扩展应用</h2>
+<p>“油猴”（Tampermonkey）其实是一个脚本管理器，它的魅力其实是脚本文件的魅力。现代的网页特效缤纷，外观出彩，其中 CSS 样式表和 JavaScript 脚本起到了不可或缺的作用，比如说我的博客上的各种文字、图片的显示效果就是通过 CSS 和 JavaScript 脚本来实现的。Tampermonkey 通过加载第三方的脚本文件，改变页面中的 CSS 和 JavaScript 元素，可以让整个网页大变样，也可以在网页中增加额外的功能。安装步骤如下：（以 Chrome 浏览器为例）</p>
+<h3 id="点击-chrome-浏览器菜单更多工具-扩展程序">点击 Chrome 浏览器菜单【更多工具】-【扩展程序】。</h3>
+<figure data-type="image" tabindex="1"><img src="https://caolist.github.io/post-images/1566281992705.png" alt="" width="800" loading="lazy"></figure>
+<h3 id="将油猴crx-安装文件拖放到这个页面并确认安装">将“油猴”crx 安装文件拖放到这个页面，并确认安装。</h3>
+<figure data-type="image" tabindex="2"><img src="https://caolist.github.io/post-images/1566281996432.png" alt="" width="800" loading="lazy"></figure>
+<p>需要“油猴”crx 安装文件朋友可以关注我订阅号【巧克力风暴】后在后台回复：<strong>油猴</strong>，就可以直接获取下载地址了。</p>
+<p>注：Firefox 浏览器点击 <a href="https://addons.mozilla.org/zh-CN/firefox/addon/tampermonkey/?src=search">https://addons.mozilla.org/zh-CN/firefox/addon/tampermonkey/?src=search</a> 链接直接安装</p>
+<h2 id="编写屏蔽-mailto-的脚本">编写屏蔽 mailto 的脚本</h2>
+<h3 id="邮件点击油猴图标点击选项">邮件点击“油猴”图标，点击【选项】：</h3>
+<figure data-type="image" tabindex="3"><img src="https://caolist.github.io/post-images/1566282001816.png" alt="" width="800" loading="lazy"></figure>
+<h3 id="点击新建脚本">点击【+】新建脚本：</h3>
+<figure data-type="image" tabindex="4"><img src="https://caolist.github.io/post-images/1566282005547.png" alt="" width="800" loading="lazy"></figure>
+<h3 id="编写屏蔽-mailto-的-javascript-脚本">编写屏蔽 mailto 的 JavaScript 脚本：</h3>
+<figure data-type="image" tabindex="5"><img src="https://caolist.github.io/post-images/1566282010740.png" alt="" width="800" loading="lazy"></figure>
+<h3 id="点击文件标签的保存">点击【文件】标签的【保存】：</h3>
+<figure data-type="image" tabindex="6"><img src="https://caolist.github.io/post-images/1566282015394.png" alt="" width="800" loading="lazy"></figure>
+<h3 id="点击已安装脚本可以看到已安装脚本列表里面有了kill-mailto">点击【已安装脚本】，可以看到已安装脚本列表里面有了【Kill mailto】:</h3>
+<figure data-type="image" tabindex="7"><img src="https://caolist.github.io/post-images/1566282021277.png" alt="" width="800" loading="lazy"></figure>
+<h3 id="关闭油猴选项页面后任意访问一个网站可以发现油猴的图标已经显示一个红色的角标了说明这个脚本已经生效">关闭油猴选项页面后，任意访问一个网站，可以发现“油猴”的图标已经显示一个红色的角标了，说明这个脚本已经生效。</h3>
+<figure data-type="image" tabindex="8"><img src="https://caolist.github.io/post-images/1566282027828.png" alt="" width="800" loading="lazy"></figure>
+<h3 id="点击网站上的邮件链接你会发现没像往常一样有弹出邮件客户端而是弹出了一个对话框邮件地址已经复制到了你的剪切板中-这时你可以在任意输入框-ctrl-v-一下发现邮件地址被粘贴上了">点击网站上的邮件链接，你会发现没像往常一样有弹出邮件客户端，而是弹出了一个对话框【邮件地址已经复制到了你的剪切板中。】，这时你可以在任意输入框 Ctrl + V 一下，发现邮件地址被粘贴上了。</h3>
+<figure data-type="image" tabindex="9"><img src="https://caolist.github.io/post-images/1566282033187.png" alt="" width="800" loading="lazy"></figure>
+<p>具体脚本如下：</p>
+<pre><code class="language-JavaScript">// ==UserScript==
+// @name Kill mailto
+// @namespace
+// @version 0.0.2
+// @author caolist
+// @description
+// @icon 
+// @homepage 
+// @supportURL 
+// @match *://*/*
+// @grant GM_setClipboard
+// ==/UserScript==
+
+window.onload=function(){
+  document.querySelectorAll('p').forEach((el, index, thisArray)=&gt;{
+    el.innerText.match(/[A-Za-z0-9+/]*={0,2}(?=[^&gt;]*(&lt;[^\/script|^\/style]|$))/g).forEach((strMaybeBase64)=&gt;{
+      if(strMaybeBase64.length&gt;0){
+        try{
+          const strText = window.atob(strMaybeBase64)
+          if(strText.match(/^([A-Za-z0-9_\-.])+\@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,6})$/) !== null){
+            const reg = new RegExp(strMaybeBase64+'(?=[^&gt;]*(&lt;(?!\/(script|style))|$))', 'gi')
+            const newCode = '&lt;a href=&quot;mailto:'+strText+'&quot;&gt;'+strText+'&lt;/a&gt;'
+            el.innerHTML = el.innerHTML.replace(reg, newCode)
+          }
+        }
+        catch(e){}
+      }
+    })
+    if(index === thisArray.length-1){
+      document.querySelectorAll('a[href^=mailto]').forEach((thelink)=&gt;{
+        const themail = thelink.href.replace(/^mailto:(.*?@[^?]*).*$/i, '$1')
+        thelink.onclick = function(e){ e.preventDefault(e) }
+        thelink.addEventListener('click', (e)=&gt;{
+          e.preventDefault(e)
+          GM_setClipboard(themail)
+          alert('邮件地址已经复制到了你的剪切板中。')
+          e.preventDefault()
+        })
+      })
+    }
+  })
+}
+</code></pre>
+<h1 id="总结">总结</h1>
+<p>这篇文字的核心其实是“油猴”，他不仅仅只是做到能屏蔽 mailto，更强大的功能值得你去探索。如果有 JavaScript 基础的话，可以试着编写自己需要的功能。</p>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://caolist.github.io/post/ozVkzLABB/" class="post-title gt-a-link">
+                    让你的 iPhone + AirPods 变成“监听器”
+                </a>
+            </div>
+        
+
+        
+            
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'a0326ada9cc2fac32f54',
+    clientSecret: 'a301f656a89e221386d5c5fc4d3b8ba740a2bcdb',
+    repo: 'caolist.github.io',
+    owner: 'caolist',
+    admin: ['caolist'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+            
+
+            
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">千里之行，始于足下。</div>
+    <div class="social-container">
+        
+            
+                <a href="https://github.com/caolist" target="_blank">
+                    <i class="fab fa-github gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+                <a href="https://weibo.com/caoyuli" target="_blank">
+                    <i class="fab fa-weibo gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    Copyright &copy; 2020 caolist.top  All Rights Reserved.
+</br>
+Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a href="https://caolist.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+    hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+</div>
+</body>
+</html>
