@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://caolist.github.io</id>
     <title>caolist&apos;s personal Blog</title>
-    <updated>2020-03-03T07:57:26.448Z</updated>
+    <updated>2020-03-03T09:09:46.082Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://caolist.github.io"/>
     <link rel="self" href="https://caolist.github.io/atom.xml"/>
@@ -10,6 +10,35 @@
     <logo>https://caolist.github.io/images/avatar.png</logo>
     <icon>https://caolist.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, caolist&apos;s personal Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[MySQL 数据实时同步到 Elasticsearch 方案]]></title>
+        <id>https://caolist.github.io/post/S3nrsIpZM/</id>
+        <link href="https://caolist.github.io/post/S3nrsIpZM/">
+        </link>
+        <updated>2020-03-03T09:08:31.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="mysql-数据实时同步到-elasticsearch-方案">MySQL 数据实时同步到 Elasticsearch 方案</h1>
+<h2 id="前言">前言</h2>
+<p>目前业务数据大多存放于传统关系型数据库中，在海量数据检索场景中，检索速度效率比较低，满足不了要求，于是利用 Elasticsearch（以下文中简称 ES） 进行检索的方案营运而生。</p>
+<p>目前关于数据同步的方案比较多，经过比较和调研，暂时采取阿里巴巴的 Canal（原理是对 MySQL 的 Binlog 监视，因此需要打开 MySQL 的 Binlog） 作为对 MySQL 数据抽取工具，为了使抽取数据达到通用、高可用，采取了 Canal 抽取 Binlog 数据到 Kafka 消息队列中的方案（如果对通用场景没有要求，而且业务简单，可以使用 Canal 原生的 ES 适配器直接写入 ES 索引中）。</p>
+<p>数据处理选用流式处理框架 Flink 做数据清洗和加工，利用 Kafka Connector 读取 Kafka 消息队列数据，利用 Flink 内置的算子处理数据，然后利用 ES Connector 进行 ES 数据的写入（如果加工时需要读取 ES 数据，同样利用 ES Connector 做 ES 数据的获取 ）。</p>
+<p>接下来对具体的流程做描述，Canal 的使用配置暂时不赘述，分别从 ES 索引的设计，Flink 对 Kafka 数据的解析、读取/写入 ES 的方法做重点说明。</p>
+<h2 id="具体操作">具体操作</h2>
+<h3 id="es-索引设计">ES 索引设计</h3>
+<h4 id="单表同步">单表同步</h4>
+<p>这一个场景比较通常，MySQL 源数据库表中的字段和 ES 索引一一对应即可，但前提是必须有一个确定的主键，或者能唯一区别数据的主键设计，因为同步操作需要依靠这个主键进行增、改、删操作。</p>
+<p>如果需要按照时间进行多索引的设计，那么需要 MySQL 源数据表有相应的时间戳字段作为判断需要进行删、改数据所在 ES 索引的依据。</p>
+<h4 id="多表关联同步">多表关联同步</h4>
+<p>这个场景相对比较复杂，实现方式也有多种，这里分别进行叙述。</p>
+<ol>
+<li>在 MySQL 中建立实体视图（实际上是一张数据表），利用触发器做多表关联的数据映射。然后设计一个数据关联拉横后的 ES 索引，接着进行数据同步操作。优点是这个视图相当于业务上的数据拉横，接下来的操作与单表同步的方式无异，缺点是需要在源数据库上做操作，有可能会影响源数据库的性能，另外需要额外的权限；</li>
+<li>依然讲关联的多个数据表按照单表同步的方式，对多表分别设计对应的 ES 索引，然后进行数据同步操作，同样需要设计一个数据关联拉横后的 ES 索引，只是将数据关联的操作放到 Flink 中进行，过程中需要额外对已经同步到 ES 中的各个源表对应的索引数据进行检索关联。优点是不影响源数据库，缺点是增加了 Flink 集群的压力，另外 ES 集群中也需要额外储存实际上不必要的数据，占用了空间。</li>
+</ol>
+<p>采用哪一种方式，需要综合判断。</p>
+<h3 id="flink-操作">Flink 操作</h3>
+<p>采用 Kafka Connector 对 Canal 推送的 Kafka 消息进行解析，通过窗口、水印机制对数据进行排序，保证数据同步操作的时序正确。</p>
+<p>如果是单表同步的场景，直接利用 ES Connector 的 Sink 对解析好的数据进行写入。如果是多表关联操作在 Flink 中进行，需要同时对 ES 数据进行检索关联，然后将关联后的数据通过 ES Connector 的 Sink 写入 ES 索引中。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[关于停电想到的时代的变化]]></title>
         <id>https://caolist.github.io/post/dKV-lBx15/</id>
@@ -578,25 +607,6 @@ $ firewall-cmd --reload
 <img src="https://caolist.github.io/post-images/1566289857392.jpg" alt="" width="300" loading="lazy"><br>
 <img src="https://caolist.github.io/post-images/1566289861743.jpg" alt="" width="300" loading="lazy"></p>
 <p>我这里的支付分是 <strong>645</strong>，大家的支付分是多少呢？不知道微信支付分的评分规则是什么，但肯定是越高越好了吧。 欢迎在留言区分享一下你的支付分。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[iPhone 批量移动图标的小技巧]]></title>
-        <id>https://caolist.github.io/post/bYm2IN8SD/</id>
-        <link href="https://caolist.github.io/post/bYm2IN8SD/">
-        </link>
-        <updated>2019-02-12T01:42:45.000Z</updated>
-        <content type="html"><![CDATA[<p>使用苹果手机的朋友们有时会面临一个问题：该怎样一次移动多个应用图标到另外一个分屏或者一个文件夹呢？难道只有安卓手机才支持这种便捷操作？！</p>
-<p>这里告诉大家一个办法，不用越狱也不用换手机，很简单。</p>
-<ol>
-<li>用一个手指长按不要按到底并轻微移动某一个应用图标，主意这个轻微移动最重要！</li>
-<li>然后再用另外一个手指轻点其他应用图标，就能将这些图标合并到第一个手指下的图标了。</li>
-<li>移动这个合并后的图标，就可以把这些图标批量移动到任意位置了。</li>
-<li>补充一下，当第一个手指下合并了多个应用图标之后，移动这个手指到另外一个应用图标或者文件夹之上，就能创建新的文件夹或者添加进原有文件夹了。</li>
-</ol>
-<p>关于这个操作，我录了一个短视频，供大家参考。</p>
-<figure data-type="image" tabindex="1"><img src="https://caolist.github.io/post-images/1566284889811.GIF" alt="" loading="lazy"></figure>
-<p>注意：这个操作我是在 ios 12 的版本下验证过的，ios 10 没有这个功能，手头上没有 ios 11 及 ios 10 以下版本的苹果手机，因此不知道其他系统版本是否有这个功能，大家可以试一试亲自试一试。</p>
 ]]></content>
     </entry>
 </feed>
