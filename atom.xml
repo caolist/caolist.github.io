@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://caolist.github.io</id>
     <title>caolist&apos;s personal Blog</title>
-    <updated>2020-03-04T01:39:32.604Z</updated>
+    <updated>2020-03-04T01:42:27.873Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://caolist.github.io"/>
     <link rel="self" href="https://caolist.github.io/atom.xml"/>
@@ -16,8 +16,7 @@
         <link href="https://caolist.github.io/post/S3nrsIpZM/">
         </link>
         <updated>2020-03-03T09:08:31.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="mysql-数据实时同步到-elasticsearch-方案">MySQL 数据实时同步到 Elasticsearch 方案</h1>
-<h2 id="前言">前言</h2>
+        <content type="html"><![CDATA[<h2 id="前言">前言</h2>
 <p>目前业务数据大多存放于传统关系型数据库中，在海量数据检索场景中，检索速度效率比较低，满足不了要求，于是利用 Elasticsearch（以下文中简称 ES） 进行检索的方案营运而生。</p>
 <p>目前关于数据同步的方案比较多，经过比较和调研，暂时采取阿里巴巴的 Canal（原理是对 MySQL 的 Binlog 监视，因此需要打开 MySQL 的 Binlog） 作为对 MySQL 数据抽取工具，为了使抽取数据达到通用、高可用，采取了 Canal 抽取 Binlog 数据到 Kafka 消息队列中的方案（如果对通用场景没有要求，而且业务简单，可以使用 Canal 原生的 ES 适配器直接写入 ES 索引中）。</p>
 <p>数据处理选用流式处理框架 Flink 做数据清洗和加工，利用 Kafka Connector 读取 Kafka 消息队列数据，利用 Flink 内置的算子处理数据，然后利用 ES Connector 进行 ES 数据的写入（如果加工时需要读取 ES 数据，同样利用 ES Connector 做 ES 数据的获取 ）。</p>
